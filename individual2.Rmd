@@ -1,0 +1,22 @@
+---
+title: "ds202_lab2"
+author: "Blake Inderski"
+date: "February 12, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+choco <-read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+#head(choco)
+```
+
+#q2 Individual
+```{r}
+boxplot(Cocoa.Pct ~ Rating, data = choco) #ratings are descrete
+```
+<br />
+While most chocolates rated have approximately 70% cacao percentage, the candies that had greater cacao amounts corresponded to lower rating.

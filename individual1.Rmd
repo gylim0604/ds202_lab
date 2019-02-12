@@ -8,8 +8,11 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r}
 choco <-read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
-head(choco)
+#head(choco)
+```
 
 #q1 Individual
 ```{r}
@@ -22,9 +25,3 @@ head(choco)
   length(which(choco$Rating > summary(choco$Rating)[["3rd Qu."]]+1.5*iqr))
 ```
 The histogram is skewed towards the left. The mean is 3.191 while the median is 3.250. There are a total of 51 outliers, 49 lower outliers and 2 upper outliers. 
-
-#q2 Individual
-```{r}
-  plot(choco$Cocoa.Pct,choco$Rating)
-```
-#Most chocolates had a cacao percentage of 70. However,chocolates with less than 50 cacao percentage never got a score less than 2, while chocolates with a 100 cacao percentage had more lower scores compared to the rest
